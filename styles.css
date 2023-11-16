@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@800&display=swap');
+
+:root {
+  --primary: #FFFCF2;
+  --primary-gray: #CCC5B9;
+  --secondary-gray: #403D39;
+  --secondary-dark: #2F2E2C;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.95);
+  --orange-moustace: #F7941E;
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Merriweather', serif;
+}
+
+body {
+  background-color: var(--primary-gray)
+}
+header nav {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 2rem;
+  padding: 1rem 0;
+  text-align:center;
+}
+
+header nav a {
+  background-color: var(--secondary-dark);
+  color: var(--primary-gray);
+  padding: 1rem 1.25rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: var(--shadow);
+}
+
+header nav a:hover {
+  background-color: var(--primary);
+  color: var(--secondary-dark);
+}
+
+main {
+  display: grid;
+  margin: 0 2rem;
+  grid-template-columns: 1fr 2.5fr 0.75fr;
+  grid-gap: 1.5rem;
+  grid-template-rows: repeat (2, 12,5rem) 1fr;
+  grid-template-areas: 
+    "social showcase top-box-a"
+    "social showcase top-box-b"
+    "services services services";
+}
+
+.btn {
+  background-color: var(--primary-gray);
+  color: var(--secondary-dark);
+  padding: 1.2rem;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  width: max-content; 
+}
+
+aside {
+  grid-area: social;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: var(--primary);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+aside a {
+  color: var(--secondary-dark);
+  padding: 1rem 1.25rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: var(--shadow);
+}
+
+aside h3 {
+  color: var(--secondary-dark);
+}
+
+#showcase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  background-image: url(img/scott-webb-yekGLpc3vro-unsplash\(2\).jpg);
+  background-position: center center;
+  background-size: cover;
+  box-shadow: var(--shadow);
+  grid-area: showcase;
+}
+
+#showcase h1 {
+  font-size: 3.5rem;
+  font-family: 'Work Sans', sans-serif;
+  color: var(--primary);
+  text-shadow: 0 0 5px rgb(0, 0, 0);
+  margin: 0;
+}
+
+#showcase p {
+  color: var(--primary);
+}
+
+.top-box{
+  display: flex;
+  box-shadow: var(--shadow);
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary);
+  padding: 1.5rem;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1rem;
+}
+
+.price {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  color: red;
+  text-decoration: line-through;
+}
+
+.real-price {
+  font-size: 2.5rem;
+  color: var(--secondary-gray);
+}
+
+.top-box-a {
+  grid-area: top-box-a;
+}
+
+.top-box-b {
+  grid-area: top-box-b;
+}
+
+#services {
+  grid-area: services;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--primary);
+  box-shadow: var(--shadow);
+  padding: 1rem 1.5rem;
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: small;
+  font-style: normal;
+  padding: 0.5rem;
+  box-shadow: var(--shadow);
+  background-color: var(--orange-moustace);
+}
+
+footer address{
+  text-align: center;
+  color: var(--secondary-dark);}
